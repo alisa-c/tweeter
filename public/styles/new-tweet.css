@@ -1,0 +1,27 @@
+/* style for the compose tweet section */
+
+.new-tweet {
+  margin: 60px auto;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: .5em;
+}
+
+h2{
+  border-bottom: 1px solid #244751;
+  margin-top: 0px;
+}
+
+textarea {
+  height: 64px;
+  width: 370px;
+  padding-top: 7px;
+}
+
+footer.new-tweet {
+  display: block;
+}
+
+.counter {
+  float: right;
+}
