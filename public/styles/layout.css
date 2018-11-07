@@ -8,6 +8,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  font-family: Roboto Condensed, sans-serif;
 }
 
 /*
@@ -15,7 +16,8 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: 0px;
+  margin-top: 80px;
   color: #244751;
   background-color: #eee;
 }
@@ -23,3 +25,10 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main.container{
+  width: 450px;
+  margin: 80px auto;
+  padding: 1em 2em;
+  background-color: white;
+ }
