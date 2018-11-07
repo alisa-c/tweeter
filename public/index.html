@@ -33,6 +33,26 @@
 
     <!-- Counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- AJAX FUNCTION -->
+      <script type="text/javascript">
+        $(document).ready( function () {
+          $( "form" ).submit(function( event ) {
+            event.preventDefault();
+             if($(".counter").text() == 140) {
+              alert("YOUR TWEET EMPTY!");
+            } else if ($(".counter").text() <= 0) {
+              alert("YOUR TWEET TOO LARGE!")
+            } else {
+                $.ajax({url:'/tweets', method: 'POST', data: $( this ).serialize()})
+                .then(function (data){
+                  console.log(data);
+                });
+            }
+          });
+        });
+      </script>
+
   </head>
 
   <body>
