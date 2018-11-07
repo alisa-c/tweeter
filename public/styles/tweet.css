@@ -1,0 +1,57 @@
+/* style for all the tweets */
+
+.tweet-container {
+  border-radius: 5px;
+  margin: 0px auto;
+  border: 1px solid #f0f0f0;
+}
+
+.tweet header {
+  background-color: #f0f0f0;
+  height: 50px;
+  padding: 7px;
+  opacity: 0.5;
+}
+
+.tweet header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.tweet header .fullName {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.tweet header .handle {
+  display: inline-block;
+  float: right;
+}
+
+.tweet p {
+  padding: 1em;
+}
+
+.tweet footer {
+  border-top: 1px solid #f0f0f0;
+  font-size: 13px;
+  padding: 0.7em;
+}
+
+.tweet .icons{
+  float: right;
+  opacity: 0;
+}
+
+.tweet-container:hover .tweet .icons{
+  opacity: 1;
+}
+
+.tweet-container:hover .tweet header {
+  opacity: 1;
+}
+
+.tweet-container:hover {
+  border: 1px solid darkgrey;
+}
