@@ -7,26 +7,74 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- External used font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav related CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- New tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+    <!-- Icon link -->
+    <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png"cd>
       <span class="header">Tweeter</span>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets/">
+           <textarea name="text" placeholder="What are you humming about?"></textarea>
+           <footer>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </footer>
+          </form>
+      </section>
+
+      <section class="tweet-container">
+          <article class="tweet">
+            <header>
+              <img src="https://cdn.shopify.com/s/files/1/1365/2497/products/12547-DuckMask-Ducks_800x.jpg?v=1520535208"/>
+              <div class="fullName">Alisa</div>
+              <div class="handle">@alisa</div>
+            </header>
+            <p class="mainContent">Hello testing tweeter</p>
+            <footer class="timeStamp">1 hour ago
+              <div class="icons">
+              <ion-icon name="flag"></ion-icon>
+              <ion-icon name="repeat"></ion-icon>
+              <ion-icon name="heart"></ion-icon>
+              </div>
+            </footer>
+          <article>
+      </section>
+
     </main>
 
   </body>
