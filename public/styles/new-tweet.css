@@ -25,3 +25,7 @@ footer.new-tweet {
 .counter {
   float: right;
 }
+
+.error span {
+  color: red;
+}

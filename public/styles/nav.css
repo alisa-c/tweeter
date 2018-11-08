@@ -22,3 +22,18 @@
   margin-left: 10px;
 }
 
+#nav-bar input {
+  width: 96px;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: right;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #e8fdff;
+  color: #00a087;
+}
+
+#nav-bar:hover input {
+  background-color: white;
+}
