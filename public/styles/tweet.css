@@ -44,11 +44,11 @@
   opacity: 0;
 }
 
-.tweet:hover .tweet .icons{
+.tweet:hover .icons{
   opacity: 1;
 }
 
-.tweet:hover .tweet header {
+.tweet:hover header {
   opacity: 1;
 }
 
