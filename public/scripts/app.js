@@ -6,7 +6,6 @@
 
 const createTweetElement = (data) => {
   return `
-      <section class="tweet-container">
         <article class="tweet">
           <header>
             <img src="${data.user.avatars.small}"/>
@@ -22,17 +21,10 @@ const createTweetElement = (data) => {
             </div>
           </footer>
         <article>
-      </section>
+
          `;
 }
 
-function renderTweets(tweets) {
-  for (tweet of tweets) {
-    let $tweet = createTweetElement(tweet);
-    $('.container').append($tweet);
-  }
-  return;
-}
 
 function escape(str) {
   var div = document.createElement('div');
@@ -40,33 +32,17 @@ function escape(str) {
   return div.innerHTML;
 }
 
-   $(document).ready( function () {
-    $(".error").hide();
-          $( "form" ).submit(function( event ) {
-            event.preventDefault();
-             if($(".counter").text() == 140) {
-              $(".error").slideUp();
-              $(".error span").empty();
-              $(".error span").append("<span>Please enter a tweet.</span>");
-              $(".error").slideDown();
-            } else if ($(".counter").text() < 0) {
-              $(".error").slideUp();
-              $(".error span").empty();
-              $(".error").slideDown();
-              $(".error span").append("<span>Your tweet is too long.</span>");
-            } else {
-              $(".error").slideUp();
-              $(".error span").empty();
-                $.ajax({url:'/tweets', method: 'POST', data: $( this ).serialize()})
-                .then(function (data){
-                  location.reload();
-                });
-            }
-          });
-        });
 
+function renderTweets(tweets) {
+  for (tweet of tweets) {
+    let $tweet = createTweetElement(tweet);
+    $('.tweet-container').prepend($tweet);
+  }
+  return;
+}
 
-$( document ).ready(function() {
+$(document).ready( function () {
+
   function loadTweet() {
     $.ajax({
       url:' /tweets',
@@ -78,4 +54,35 @@ $( document ).ready(function() {
     });
   }
   loadTweet();
+
+
+  $(".error").hide();
+  $( "form" ).submit(function( event ) {
+    event.preventDefault();
+    if($(".counter").text() == 140) {
+      $(".error").slideUp();
+      $(".error span").empty();
+      $(".error span").append("<span>Please enter a tweet.</span>");
+      $(".error").slideDown();
+    } else if ($(".counter").text() < 0) {
+      $(".error").slideUp();
+      $(".error span").empty();
+      $(".error").slideDown();
+      $(".error span").append("<span>Your tweet is too long.</span>");
+    } else {
+      $(".error").slideUp();
+      $(".error span").empty();
+        $.ajax({url:'/tweets', method: 'POST', data: $( this ).serialize()})
+         .then(function (data){
+            location.reload();
+        });
+    }
+  });
+
+  $( ".composeSlide" ).click(function() {
+    $( ".new-tweet" ).slideToggle();
+    $("textarea").focus();
+  });
+
+
 });

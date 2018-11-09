@@ -1,6 +1,6 @@
 /* style for all the tweets */
 
-.tweet-container {
+.tweet {
   border-radius: 5px;
   margin: 20px auto;
   border: 1px solid #f0f0f0;
@@ -44,14 +44,14 @@
   opacity: 0;
 }
 
-.tweet-container:hover .tweet .icons{
+.tweet:hover .tweet .icons{
   opacity: 1;
 }
 
-.tweet-container:hover .tweet header {
+.tweet:hover .tweet header {
   opacity: 1;
 }
 
-.tweet-container:hover {
+.tweet:hover {
   border: 1px solid darkgrey;
 }
