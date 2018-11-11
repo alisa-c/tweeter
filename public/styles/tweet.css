@@ -4,10 +4,13 @@
   margin: 2em auto;
   border: 1px solid #f0f0f0;
   width: 100%;
+  border-radius: 5px;
 }
 
 .tweet header {
   background-color: #f0f0f0;
+  padding: 10px;
+  opacity: 0.5;
 }
 
 .tweet header img {
@@ -17,6 +20,8 @@
 .tweet header .fullName {
   vertical-align: top;
   display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .tweet header .handle {
@@ -25,7 +30,8 @@
 }
 
 .tweet p {
-  padding: 1em;
+  padding: .5em;
+  word-wrap: break-word;
 }
 
 .tweet footer {
@@ -37,36 +43,22 @@
 .tweet .icons {
   color: #00a087;
   float: right;
+  opacity: 0;
+}
+
+.tweet:hover .icons {
+  opacity: 1;
+  color: #00a087;
+}
+
+.tweet:hover header {
   opacity: 1;
 }
 
-@media only screen and (min-width: 992px) {
-  .tweet {
-  border-radius: 5px;
+.tweet:hover {
+  border: 1px solid darkgrey;
 }
 
-  .tweet header {
-    opacity: 0.5;
-  }
-
-
-  .tweet .icons {
-    opacity: 0;
-  }
-
-  .tweet:hover .icons {
-    opacity: 1;
-    color: #00a087;
-  }
-
-  .tweet:hover header {
-    opacity: 1;
-  }
-
-  .tweet:hover {
-    border: 1px solid darkgrey;
-  }
-}
 
 
 

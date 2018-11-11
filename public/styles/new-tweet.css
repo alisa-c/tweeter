@@ -4,6 +4,7 @@
   margin: 60px auto 0px;
   background-color: #f0f0f0;
   padding: .5em;
+  border-radius: 5px;
 }
 
 h2{
@@ -28,8 +29,3 @@ footer.new-tweet {
 .error span {
   color: red;
 }
-
-@media (min-device-width: 500px) {
-  .new-tweet{
-  border-radius: 5px;
-  }
