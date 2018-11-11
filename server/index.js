@@ -7,24 +7,12 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
-// const sassMiddleware = require('node-sass-middleware');
-// const path = require('path');
-
-
+//Require for the mongo database
 const {MongoClient} = require("mongodb");
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
-// app.use(sassMiddleware({
-//     /* Options */
-//     src: '/styles',
-//     dest: path.join(__dirname, 'public'),
-//     debug: true,
-//     outputStyle: 'compressed',
-//     prefix:  '/prefix'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
-// }));
 
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
@@ -40,8 +28,8 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 
   app.use("/tweets", tweetsRoutes);
 
-  //db.close();
 });
+
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

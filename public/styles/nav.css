@@ -9,19 +9,18 @@
   z-index: 1;
 }
 
-#nav-bar .logo {
+.logo {
   height: 5rem;
   width: 5rem;
   float: left;
 }
 
-#nav-bar .header {
+.header {
   line-height: 5rem;
   font-size: 5rem;
   float: left;
   margin-left: 2rem;
 }
-
 
 .composeSlide {
   width: 7rem;
@@ -49,5 +48,4 @@
   #nav-bar .header {
     display: none;
   }
-
 }

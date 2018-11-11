@@ -1,3 +1,5 @@
+//function for the character count
+
 const MAX_CHARACTERS_ALLOWED = 140;
 
 $(document).ready(function() {
