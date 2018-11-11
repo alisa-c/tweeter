@@ -21,20 +21,25 @@ body {
   margin: 0px;
   margin-top: 80px;
   color: #244751;
-  background-color: #eee;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
-
 .container {
-  width: 450px;
-  margin: 80px auto;
-  padding: 1em 2em;
-  background-color: white;
- }
+  width: 100%;
+}
 
+@media (min-device-width: 500px) {
+  body {
+    background-color: #eee;
+  }
+
+  .container{
+   width: 50%;
+   margin: auto;padding: 1em 2em;
+   background-color: white;
+  }
+}
 

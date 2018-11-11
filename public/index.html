@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Meta device responsive desgin -->
+    <meta name="viewport" content="width=device-width">
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
@@ -28,17 +31,15 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
- <!-- Timestamp -->
- <script src="https://timeago.yarp.com/jquery.timeago.js" type="text/javascript"></script>
+    <!-- Time ago -->
+    <script src="https://timeago.yarp.com/jquery.timeago.js" type="text/javascript"></script>
 
-
-<!-- App JS -->
+    <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
     <!-- Counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <meta name="viewport" content="width=device-width">
   </head>
 
   <body>
@@ -56,18 +57,20 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
           <form method="POST" action="/tweets/">
-           <textarea name="text" placeholder="What are you humming about?"></textarea>
-           <div class="error">
-           <span></span>
-         </div>
-           <footer>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </footer>
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <div class="error">
+             <span></span>
+            </div>
+            <footer>
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </footer>
           </form>
       </section>
 
-      <section class="tweet-container"></section>
+      <section class="tweet-container">
+      </section>
+
     </main>
 
   </body>

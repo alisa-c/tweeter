@@ -3,7 +3,6 @@
 .new-tweet {
   margin: 60px auto 0px;
   background-color: #f0f0f0;
-  border-radius: 5px;
   padding: .5em;
 }
 
@@ -14,7 +13,7 @@ h2{
 
 textarea {
   height: 64px;
-  width: 370px;
+  width: 100%;
   padding-top: 7px;
 }
 
@@ -29,3 +28,8 @@ footer.new-tweet {
 .error span {
   color: red;
 }
+
+@media (min-device-width: 500px) {
+  .new-tweet{
+  border-radius: 5px;
+  }
